@@ -1,0 +1,192 @@
+/* --- Réinitialisation des styles de base --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* --- HEADER --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #222;
+    color: white;
+    padding: 15px 20px;
+    position: relative;
+}
+
+.logo a {
+    font-size: 24px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.site-title {
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* --- NAVIGATION --- */
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.nav-links a:hover {
+    background: #444;
+}
+
+/* --- MENU BURGER & RESPONSIVE --- */
+.burger-menu {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+}
+
+/* Version Desktop */
+@media screen and (min-width: 769px) {
+    .nav-links {
+        display: flex;
+        gap: 20px;
+    }
+}
+
+/* Version Mobile & Tablette */
+@media screen and (max-width: 768px) {
+    .burger-menu {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #222;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .nav-links.show {
+        display: flex;
+        animation: slideIn 0.3s ease-in-out;
+    }
+
+    .nav-links li {
+        text-align: right;
+        padding: 10px;
+    }
+
+    .nav-links a {
+        color: white;
+        text-decoration: none;
+        display: block;
+    }
+}
+
+/* Animation pour l'ouverture du menu */
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* --- STYLE DU CONTENU PRINCIPAL --- */
+main {
+    max-width: 900px;
+    margin: 30px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #222;
+    margin-bottom: 10px;
+}
+
+/* --- STYLE DU FORMULAIRE DE CONTACT --- */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, textarea, button {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background: #222;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #444;
+}
+
+/* --- STYLE DU LIEN POUR TÉLÉCHARGER LE CV --- */
+a[download] {
+    display: inline-block;
+    margin-top: 10px;
+    background: #222;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+a[download]:hover {
+    background: #444;
+}
+
+/* --- RESPONSIVE DESIGN GLOBAL --- */
+@media screen and (max-width: 600px) {
+    main {
+        width: 90%;
+    }
+
+    .logo a {
+        font-size: 20px;
+    }
+
+    .site-title {
+        font-size: 18px;
+    }
+}
