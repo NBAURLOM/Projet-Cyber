@@ -1,0 +1,238 @@
+/* Styles de base */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ECF0F1;
+    color: #34495E;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Animation de fondu au chargement */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Header */
+header {
+    background-color: #2C3E50;
+    padding: 20px;
+    animation: slideDown 1s ease-in-out;
+}
+
+/* Animation d’apparition du header */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #1ABC9C;
+    font-weight: bold;
+    transition: color 0.3s, transform 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #ECF0F1;
+    transform: scale(1.1);
+}
+
+/* Boutons stylés avec effet */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    margin-top: 20px;
+    background-color: #1ABC9C;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+    animation: bounceIn 1s ease-in-out;
+}
+
+/* Animation des boutons */
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    60% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.btn:hover {
+    background-color: #16A085;
+    transform: scale(1.05);
+}
+
+/* Animation des sections */
+.cv-section, .portfolio-section {
+    margin: 50px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    width: 80%;
+    max-width: 900px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-in-out forwards;
+}
+
+/* Animation d'apparition des sections */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation des projets */
+.projet {
+    background: #1ABC9C;
+    color: white;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+    opacity: 0;
+    transform: translateX(-20px);
+    animation: slideInLeft 1s ease-in-out forwards;
+}
+
+/* Apparition progressive des projets */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+/* ======= SECTION CONTACT ======= */
+#contact {
+    text-align: center;
+    padding: 50px;
+    background: linear-gradient(135deg, #1abc9c, #16a085);
+    color: white;
+    border-radius: 10px;
+}
+
+/* Conteneur principal */
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* ======= FORMULAIRE ======= */
+form {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 350px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Bouton animé */
+form button {
+    background: #1abc9c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+form button:hover {
+    background: #16a085;
+    transform: scale(1.05);
+}
+
+/* ======= INFOS CONTACT ======= */
+.contact-infos {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-infos p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+/* ======= ICONES RESEAUX ======= */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.social-icons img {
+    width: 40px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+}
